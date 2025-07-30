@@ -12,6 +12,7 @@ struct TextTypingView: View {
     @Binding var isTyping: Bool
     @Binding var textFullyDisplayed: Bool
     var textColor: Color = .white
+    var font: Font = .custom("Baby Doll", size: 20)
     
     @State private var displayedText = ""
     @State private var timer: Timer?
@@ -19,7 +20,7 @@ struct TextTypingView: View {
     var body: some View {
         ZStack(alignment: .bottomTrailing) {
             Text(displayedText)
-                .font(.system(size: 20, weight: .regular, design: .default))
+                .font(font) // aqui usa a fonte customizada
                 .multilineTextAlignment(.leading)
                 .foregroundColor(textColor)
                 .frame(maxWidth: .infinity, alignment: .leading)
