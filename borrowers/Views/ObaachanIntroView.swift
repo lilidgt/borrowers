@@ -38,7 +38,8 @@ struct ObaachanIntroView: View {
                             fullText: "In our world, there are small creatures, and we call them borrowers.\nThey hide close to our homes to borrow things. Like sugar or tea.",
                             isTyping: $isTyping,
                             textFullyDisplayed: $textFullyDisplayed,
-                            textColor: Color("DarkBrown")
+                            textColor: Color("DarkBrown"),
+                            font: .custom("Baby Doll", size: 22)
                         )
                     }
                     
